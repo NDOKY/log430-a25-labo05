@@ -114,7 +114,7 @@ def request_payment_link(order_id, total_amount, user_id):
 
     # TODO: Requête à POST /payments
     print("")
-    response_from_payment_service = requests.post('/payments-api/payments',
+    response_from_payment_service = requests.post('http://api-gateway:8080/payments-api/payments',
       json=payment_transaction,
       headers={'Content-Type': 'application/json'}
   )
